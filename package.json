@@ -1,0 +1,11 @@
+{
+  "name": "movie_seat_booking",
+  "version": "1.0.0",
+  "description": "User will able to book the seat after submitting the detail form",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Riya Basak",
+  "license": "ISC"
+}
