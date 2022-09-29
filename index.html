@@ -1,13 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>Movie Seat Booking</title>
-</head>
-<body>
+  </head>
+  <body>
+    <div id="Detail">
+      <form id="form">
+        <div><h1 id="heading">Enter Your Detail</h1></div>
+        <div>
+          <label for="Name">Name: </label>
+          <input type="text" name="Name" id="name" />
+          <label for="name" class="displayNone color" id="user_name"></label>
+        </div>
+        <div>
+          <label for="MovieName"> Movie Name: </label>
+          <select id="movieList">
+            <option value="Choose Movie Name">---Choose Movie Name---</option>
+            <option value="The Lion King">The Lion King</option>
+            <option value="Captain America">Captain America</option>
+            <option value="Tom And Jerry">Tom And Jerry</option>
+            <option value="Mr. Bean">Mr. Bean</option>
+            <option value="cinderella">cinderella</option>
+          </select>
+          <label for="movie_name" id="movie_name" class="displayNone color"></label>
+        </div>
+        <div>
+          <label for="birthday" id="birthday_lable">Birthday:</label>
+          <input type="date" id="birthday" name="birthday" />
+          <label for="seat_count" class="displayNone">Selected Seat:</label>
+          <label for="" class="displayNone color" id="total_selected_seat" ></label>
+        </div>
+        <div>
+          <label for="Mobile No.">Mobile Number:</label>
+          <input type="number" name="phone" id="phone" />
+          <label for="phone" class="displayNone color" id="uset_phone"></label>
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input type="text" id="email" name="email" />
+          <label for="email" class="displayNone color" id="user_email"></label>
+        </div>
+        <input type="submit" value="submit" id="submit" onclick="return validateForm()" />
+      </form>
+    </div>
+    <div id="bookSeat" class="disable">
+        <div id="transparent"></div>
+      <div id="bookSeatBody">
+        <div id="seatType">
+          <span class="available ">
+            <span class="material-icons "> event_seat </span>
+            <label for="" class="seat_type"> Available </label>
+          </span>
+          <span class="booked">
+            <span class="material-icons "> event_seat </span>
+            <label for="" class="seat_type"> Booked </label>
+          </span>
+          <span class="selected">
+            <span class="material-icons "> event_seat </span>
+            <label class="seat_type" for=""> Selected </label>
+          </span>
+        </div>
+        <div id="seat_div">
+          <div class="row">
+            <div class="column">
+              <span class="rowName">C</span>
+              <span class="material-icons seat"> event_seat </span>
+              <span class="material-icons seat booked"> event_seat </span>
+              <span class="material-icons seat"> event_seat </span>
+            </div>
+            <div class="column">
+              <span class="material-icons seat"> event_seat </span>
+              <span class="material-icons seat "> event_seat </span>
+              <span class="material-icons seat booked"> event_seat </span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column">
+              <span class="rowName">B</span>
+              <span class="material-icons seat"> event_seat </span>
+              <span class="material-icons seat"> event_seat </span>
+              <span class="material-icons seat"> event_seat </span>
+            </div>
+            <div class="column">
+              <span class="material-icons seat"> event_seat </span>
+              <span class="material-icons seat"> event_seat </span>
+              <span class="material-icons seat booked"> event_seat </span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column">
+              <span class="rowName">A</span>
+              <span class="material-icons seat booked"> event_seat </span>
+              <span class="material-icons seat"> event_seat </span>
+              <span class="material-icons seat"> event_seat </span>
+            </div>
+            <div class="column">
+              <span class="material-icons seat"> event_seat </span>
+              <span class="material-icons seat booked"> event_seat </span>
+              <span class="material-icons seat"> event_seat </span>
+            </div>
+          </div>
+          <div id="screen"></div>
+        </div>
+        <div id="seat_count">
+          <span>Book Seat:5</span>
+          <span> Available Seat:
+            <span id="availableSeat"></span>
+          </span>
+          <span>Selected Seat:
+            <span id="selectedSeat"></span>
+          </span>
+        </div>
+        <button id="book_seat_btn" class="disable" >Book Seat</button>
+        <span id="transparent_btn"></span>
+      </div>
+    </div>
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
