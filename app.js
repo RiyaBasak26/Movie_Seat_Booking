@@ -86,6 +86,7 @@ const calculate_age = (dob) => {
   let user_age = Math.abs(age_dt.getUTCFullYear() - 1970);
   return user_age;
 };
+/*------- while selecting seat-------*/
 bookSeat.addEventListener("click", (e) => {
     if(e.target.classList.contains("booked"))
     {
@@ -112,7 +113,7 @@ const updateSelectedSeatCount = () => {
     transparent_btn.style.display = "block";
   }
 };
-/*----------Book Seat-------------*/
+/*----------on click on Book Seat button-------------*/
 book_seat_btn.addEventListener("click", () => {
   let i, j;
   for (i = 0; i < input_field.length; i++) {

@@ -17,7 +17,7 @@
         <div><h1 id="heading">Enter Your Detail</h1></div>
         <div>
           <label for="Name">Name: </label>
-          <input type="text" name="Name" id="name" />
+          <input type="text" name="Name" id="name" onkeydown="return /[a-z]/i.test(event.key)"/>
           <label for="name" class="displayNone color" id="user_name"></label>
         </div>
         <div>
@@ -40,7 +40,7 @@
         </div>
         <div>
           <label for="Mobile No.">Mobile Number:</label>
-          <input type="number" name="phone" id="phone" />
+          <input type="tel" name="phone" id="phone" onkeydown="return /[1-9]/i.test(event.key)"/>
           <label for="phone" class="displayNone color" id="uset_phone"></label>
         </div>
         <div>

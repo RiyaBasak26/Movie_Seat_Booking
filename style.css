@@ -173,10 +173,11 @@ input,#movieList{
     background-color: rgb(215 203 205);
 }
 #transparent_btn{
-    width: 14%;
-    height: 10%;
+    width: 8%;
+    height: 6%;
     position: absolute;
-    bottom: 100px;
+    bottom: 115px;
+    cursor: not-allowed;
 }
 .displayNone{
     display: none;
