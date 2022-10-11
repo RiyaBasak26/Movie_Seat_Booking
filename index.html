@@ -18,30 +18,30 @@
         <div>
           <label for="Name">Name: </label>
           <input type="text" name="Name" id="nameInput" onkeydown="return isAlphabet(event)"/>
-          <label for="name" class="displayNone color" id="user_name"></label>
+          <label for="name" class="displayNone color" id="userName"></label>
         </div>
         <div>
           <label for="MovieName"> Movie Name: </label>
           <select id="movieList">
             <option value="" selected disabled>Please select</option>
           </select>
-          <label for="movie_name" id="movie_name" class="displayNone color"></label>
+          <label for="movie_name" id="movieName" class="displayNone color"></label>
         </div>
         <div>
-          <label for="birthday" id="birthday_lable">Birthday:</label>
+          <label for="birthday" id="birthdayLable">Birthday:</label>
           <input type="date" id="birthdayInput" name="birthday" />
           <label for="seat_count" class="displayNone">Selected Seat:</label>
-          <label for="" class="displayNone color" id="total_selected_seat" ></label>
+          <label for="" class="displayNone color" id="totalSelectedSeat" ></label>
         </div>
         <div>
           <label for="Mobile No.">Contect Number:</label>
           <input type="tel" name="phone" id="contactNumberInput" onkeypress="return isNumber(event)"/>
-          <label for="phone" class="displayNone color" id="user_contact"></label>
+          <label for="phone" class="displayNone color" id="userContact"></label>
         </div>
         <div>
           <label for="email">Email:</label>
           <input type="text" id="emailInput" name="email" />
-          <label for="email" class="displayNone color" id="user_email"></label>
+          <label for="email" class="displayNone color" id="userEmail"></label>
         </div>
         <input type="submit" value="submit" id="submit" onclick="return validateForm()" />
       </form>
@@ -64,21 +64,23 @@
           </span>
         </div>
         <div id="seat_div">
-          <div id="seat_container">
+          <div id="seatContainer">
           </div>
           <div id="screen"></div>
         </div>
         <div id="seat_count">
-          <span>Book Seat:5</span>
+          <span>Book Seat:
+            <span id="bookedSeat"></span>
+          </span>
           <span> Available Seat:
             <span id="availableSeat"></span>
           </span>
           <span>Selected Seat:
-            <span id="selectedSeat"></span>
+            <span id="selectedSeat">0</span>
           </span>
         </div>
-        <button id="book_seat_btn" class="disable" >Book Seat</button>
-        <span id="transparent_btn"></span>
+        <button id="bookSeatBtn" class="disable" >Book Seat</button>
+        <span id="transparentBtn"></span>
       </div>
     </div>
     <script src="app.js"></script>
